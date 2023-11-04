@@ -1,0 +1,33 @@
+import { IsNotEmptyObject, IsNumber, IsString } from "class-validator";
+import { ReqResDto } from "src/_interface/base.request.response.interface";
+
+export class ResponseErrorDto implements ReqResDto {
+    @IsNumber()
+    statusCode: number;
+    @IsNotEmptyObject()
+    error: Object;
+
+    @IsString()
+    message: string;
+
+    constructor(statusCode: number, error: any, message?: string) {
+        this.statusCode =  statusCode;
+        this.error = error;
+        this.message = message;
+    }
+};
+
+export class ResponseSuccessDto implements ReqResDto {
+    @IsNumber()
+    statusCode: number;
+    @IsNotEmptyObject()
+    data : Object;
+    @IsString()
+    message: string;
+
+    constructor(statusCode: number, data: any, message?: string) {
+        this.statusCode = statusCode;
+        this.data=data;
+        this.message=message;
+    }
+}

@@ -1,0 +1,98 @@
+### Create a new user
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "email": "antonis@gggfvakondios.gr",
+    "firstname":"antonis",
+    "lastname":"vakondios",
+    "username": "22c2r1s1adaa1"
+}
+
+
+
+### Get User Details
+GET http://localhost:3000/users/123
+
+### Get all
+GET http://localhost:3000/users?take=20&sortField=email
+
+### Pagination
+GET http://localhost:3000/users?retAll=1
+
+
+### Delete user
+DELETE http://localhost:3000/users/1
+
+### Update user
+PATCH  http://localhost:3000/users/117
+Content-Type: application/json
+
+{
+    "email": "ntonisssss4dddvakondios.gr",
+    "malakia":"dd"
+
+}
+
+### Get Health
+GET http://localhost:3000/health/metrics
+
+
+### User SignUp
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "email": "system@internal.com",
+    "password": "P@risL0nd0n",
+    "firstname":"System",
+    "lastname":"System",
+    "username": "SuperAdmin"
+   
+}
+
+### User SignIn
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+    "password": "P@risL0nd0n",
+    "username": "SuperAdmin"
+   
+}
+
+### Get Session
+GET http://localhost:3000/auth/whoami
+Content-Type: application/json
+
+
+###signout
+Post http://localhost:3000/auth/signout
+Content-Type: application/json
+
+
+### Create Reports
+Post http://localhost:3000/reports
+Content-Type: application/json
+
+{
+    "price":10000.00,
+    "make": "Toyota",
+    "model": "Corolla",
+    "year": 2023,
+    "mileage":500,
+    "lng":0,
+    "lat":0
+
+}
+
+### Approved Reports
+PATCH  http://localhost:3000/reports/34
+Content-Type: application/json
+
+{
+    "approved": true
+}
+
+### Gets reports
+GET http://localhost:3000/reports/estimate?make=Toyota&model=Corolla&year=2023&lng=0&lat=0&mileage=500
