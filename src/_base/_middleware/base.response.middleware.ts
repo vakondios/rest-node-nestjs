@@ -22,7 +22,7 @@ export class BaseResponseMiddleware implements NestMiddleware {
         { method: request.method },
         { url: request.originalUrl }
       );
-      return;
+//      return;
     });
     next();
   }

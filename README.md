@@ -1,4 +1,4 @@
-# Nest JS Skeleton for REST Application [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=NeoSOFT-Technologies_rest-node-nestjs&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=NeoSOFT-Technologies_rest-node-nestjs) [![CI](https://github.com/NeoSOFT-Technologies/rest-node-nestjs/actions/workflows/ci.yml/badge.svg)](https://github.com/NeoSOFT-Technologies/rest-node-nestjs/actions/workflows/ci.yml)
+# Nest JS Skeleton for REST Application [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=vakondios_rest-node-nestjs&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=vakondios_rest-node-nestjs) [![CI](https://github.com/vakondios/rest-node-nestjs/actions/workflows/ci.yml/badge.svg)](https://github.com/vakondios/rest-node-nestjs/actions/workflows/ci.yml)
 
 A skeleton/boilerplate/starter project for quickly building RESTful APIs using Node.js, NestsJS, Express, and MySQL.
 
@@ -75,7 +75,7 @@ To get started, clone the repository to your local computer. Use the following c
 
 ```bash
 // clone the application
-$ git clone https://github.com/NeoSOFT-Technologies/rest-node-nestjs.git
+$ git clone https://github.com/vakondios/rest-node-nestjs.git
 ```
 #### Install The Dependencies
 
@@ -230,7 +230,7 @@ OR
 
 `npx @compodoc/compodoc -p tsconfig.json -s`
 
-### 2. [Request and Response Cycle](https://github.com/NeoSOFT-Technologies/rest-node-nestjs/blob/main/wiki/modules/request-response.md)
+### 2. [Request and Response Cycle](https://github.com/vakondios/rest-node-nestjs/blob/main/wiki/modules/request-response.md)
 
 > An explanation of how the request and response cycle works is provided here
 
@@ -238,44 +238,44 @@ OR
 
 > Boilerplate has a custom guard enabled for handling response and request for every api. The integration of request response guard is enabled by default with response structure
 
-![Request and Response Cycle](https://github.com/NeoSOFT-Technologies/rest-node-nestjs/blob/main/wiki/images/basic-nestJS-lifecycle.png?raw=true)
+![Request and Response Cycle](https://github.com/vakondios/rest-node-nestjs/blob/main/wiki/images/basic-nestJS-lifecycle.png?raw=true)
 
 #### 2.2 Request Workflow
 
 > By creating a workflow, you can specify the template that should be used to create a change request when a request for service is logged.
 
-![Request Workflow](https://github.com/NeoSOFT-Technologies/rest-node-nestjs/blob/main/wiki/images/code-flow.jpg?raw=true)
+![Request Workflow](https://github.com/vakondios/rest-node-nestjs/blob/main/wiki/images/code-flow.jpg?raw=true)
 
 ### 3. Modules
 
-- [Logger](https://github.com/NeoSOFT-Technologies/rest-node-nestjs/blob/main/wiki/docs/modules/logger.md)
-- [Request Response](https://github.com/NeoSOFT-Technologies/rest-node-nestjs/blob/main/wiki/docs/modules/request-response.md)
-- [Mailer](https://github.com/NeoSOFT-Technologies/rest-node-nestjs/blob/main/wiki/docs/modules/mailer.md)
-- [Database](https://github.com/NeoSOFT-Technologies/rest-node-nestjs/blob/main/wiki/docs/modules/database.md)
-- [Reverse Proxy](https://github.com/NeoSOFT-Technologies/rest-node-nestjs/blob/main/wiki/docs/modules/reverse_proxy.md)
-- [Pattern](https://github.com/NeoSOFT-Technologies/rest-node-nestjs/blob/main/wiki/docs/modules/pattern.md)
-- [Crypto](https://github.com/NeoSOFT-Technologies/rest-node-nestjs/blob/main/wiki/docs/modules/crypto.md)
-- [Compression](https://github.com/NeoSOFT-Technologies/rest-node-nestjs/blob/main/wiki/docs/modules/compression.md)
-- [CORS](https://github.com/NeoSOFT-Technologies/rest-node-nestjs/blob/main/wiki/docs/modules/cors.md)
-- [Swagger/Open API](https://github.com/NeoSOFT-Technologies/rest-node-nestjs/blob/main/wiki/docs/modules/swagger.md)
-- [Database Migration](https://github.com/NeoSOFT-Technologies/rest-node-nestjs/blob/main/wiki/docs/modules/database.migration.md)
-- [Authentication](https://github.com/NeoSOFT-Technologies/rest-node-nestjs/blob/main/wiki/docs/modules/authentication.md)
+- [Logger](https://github.com/vakondios/rest-node-nestjs/blob/main/wiki/docs/modules/logger.md)
+- [Request Response](https://github.com/vakondios/rest-node-nestjs/blob/main/wiki/docs/modules/request-response.md)
+- [Mailer](https://github.com/vakondios/rest-node-nestjs/blob/main/wiki/docs/modules/mailer.md)
+- [Database](https://github.com/vakondios/rest-node-nestjs/blob/main/wiki/docs/modules/database.md)
+- [Reverse Proxy](https://github.com/vakondios/rest-node-nestjs/blob/main/wiki/docs/modules/reverse_proxy.md)
+- [Pattern](https://github.com/vakondios/rest-node-nestjs/blob/main/wiki/docs/modules/pattern.md)
+- [Crypto](https://github.com/vakondios/rest-node-nestjs/blob/main/wiki/docs/modules/crypto.md)
+- [Compression](https://github.com/vakondios/rest-node-nestjs/blob/main/wiki/docs/modules/compression.md)
+- [CORS](https://github.com/vakondios/rest-node-nestjs/blob/main/wiki/docs/modules/cors.md)
+- [Swagger/Open API](https://github.com/vakondios/rest-node-nestjs/blob/main/wiki/docs/modules/swagger.md)
+- [Database Migration](https://github.com/vakondios/rest-node-nestjs/blob/main/wiki/docs/modules/database.migration.md)
+- [Authentication](https://github.com/vakondios/rest-node-nestjs/blob/main/wiki/docs/modules/authentication.md)
 
 ### 3. Modules
 
-- [Coverage](https://github.com/NeoSOFT-Technologies/rest-node-nestjs/blob/main/wiki/docs/coverage.md)
+- [Coverage](https://github.com/vakondios/rest-node-nestjs/blob/main/wiki/docs/coverage.md)
 
 ## Miscellaneous
 
-- [Known Issues](https://github.com/NeoSOFT-Technologies/rest-node-nestjs/blob/main//wiki/docs/miscellaneous/known-issues.md)
-- [Git commits](https://github.com/NeoSOFT-Technologies/rest-node-nestjs/blob/main/wiki/docs/miscellaneous/git-commits.md)
-- [Clean Docker Images](https://github.com/NeoSOFT-Technologies/rest-node-nestjs/blob/main/wiki/docs/miscellaneous/clean-docker.md)
-- [Installation Pretteri, Husky & Lint](https://github.com/NeoSOFT-Technologies/rest-node-nestjs/blob/main/wiki/docs/miscellaneous/installation-pretteri-husky-lint.md)
+- [Known Issues](https://github.com/vakondios/rest-node-nestjs/blob/main//wiki/docs/miscellaneous/known-issues.md)
+- [Git commits](https://github.com/vakondios/rest-node-nestjs/blob/main/wiki/docs/miscellaneous/git-commits.md)
+- [Clean Docker Images](https://github.com/vakondios/rest-node-nestjs/blob/main/wiki/docs/miscellaneous/clean-docker.md)
+- [Installation Pretteri, Husky & Lint](https://github.com/vakondios/rest-node-nestjs/blob/main/wiki/docs/miscellaneous/installation-pretteri-husky-lint.md)
 
 ## Trainings
 
-- [Nest JS for Beginners](https://github.com/NeoSOFT-Technologies/rest-node-nestjs/blob/main/wiki/docs/trainings/nestjs.md)
-- [Node JS for Beginners](https://github.com/NeoSOFT-Technologies/rest-node-nestjs/blob/main/wiki/docs/trainings/nodejs.md)
+- [Nest JS for Beginners](https://github.com/vakondios/rest-node-nestjs/blob/main/wiki/docs/trainings/nestjs.md)
+- [Node JS for Beginners](https://github.com/vakondios/rest-node-nestjs/blob/main/wiki/docs/trainings/nodejs.md)
 
 ## Video Tutorials
 
@@ -311,23 +311,22 @@ Below are the video tutorial links for the modules that we have implemented in t
 
 ## Contributing To This Project
 
-Contributions are welcome from anyone and everyone. We encourage you to review the [guiding principles for contributing](https://github.com/NeoSOFT-Technologies/rest-node-nestjs/blob/main/wiki/docs/contribution.md)
+Contributions are welcome from anyone and everyone. We encourage you to review the [guiding principles for contributing](https://github.com/vakondios/rest-node-nestjs/blob/main/wiki/docs/contribution.md)
 
-* [Bug reports](https://github.com/NeoSOFT-Technologies/rest-node-nestjs/blob/main/wiki/docs/contribution/bug-reports.md)
-* [Feature requests](https://github.com/NeoSOFT-Technologies/rest-node-nestjs/blob/main/wiki/docs/contribution/feature-requests.md)
-* [Pull requests](https://github.com/NeoSOFT-Technologies/rest-node-nestjs/blob/main/wiki/docs/contribution/pull-requests.md)
+* [Bug reports](https://github.com/vakondios/rest-node-nestjs/blob/main/wiki/docs/contribution/bug-reports.md)
+* [Feature requests](https://github.com/vakondios/rest-node-nestjs/blob/main/wiki/docs/contribution/feature-requests.md)
+* [Pull requests](https://github.com/vakondios/rest-node-nestjs/blob/main/wiki/docs/contribution/pull-requests.md)
 
 ## Issues and Discussions
 
-- [Create New Issue](https://github.com/NeoSOFT-Technologies/rest-node-nestjs/issues/new)
-- [Check Existing Issues](https://github.com/NeoSOFT-Technologies/rest-node-nestjs/issues)
-- [Discussions](https://github.com/NeoSOFT-Technologies/rest-node-nestjs/discussions)
+- [Create New Issue](https://github.com/vakondios/rest-node-nestjs/issues/new)
+- [Check Existing Issues](https://github.com/vakondios/rest-node-nestjs/issues)
+- [Discussions](https://github.com/vakondios/rest-node-nestjs/discussions)
 
 ## Stay in touch
 
-* Website - [https://www.neosofttech.com/](https://www.neosofttech.com/)
-* Twitter - [@neosofttech](https://twitter.com/neosofttech)
-* Meetup -  [https://www.meetup.com/neosoft-technologies/](https://www.meetup.com/neosoft-technologies/)
-* Medium -  [https://medium.com/@neosofttech-technologies-blog](https://medium.com/@neosofttech-technologies-blog)
-* GitHub - [https://github.com/NeoSOFT-Technologies](https://github.com/NeoSOFT-Technologies)
-* Discord - [NodeJS](https://discord.gg/9xW5gQhQa4)
+* Website - [https://www.vakondios.gr/](https://www.vakondios.gr/)
+* Twitter - [@AntonisVakondi2](https://twitter.com/AntonisVakondi2)
+* Meetup -  [https://www.meetup.com/vakondios/](https://www.meetup.com/vakondios/)
+* Medium -  [https://medium.com/@avacondios](https://medium.com/@avacondios)
+* GitHub - [https://github.com/vakondios](https://github.com/vakondios)

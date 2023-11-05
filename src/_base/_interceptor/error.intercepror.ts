@@ -70,7 +70,6 @@ export class ErrorInterceptor implements NestInterceptor {
           route: request.path,
           method: request.method,
         };
-        EmailOrPasswordIsWrong;
 
         if (err instanceof RecordNotFoundError) {
           this.metricService.updateMetrics(METRIC_TYPE_ENUM.APPLICATION);
