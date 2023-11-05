@@ -118,8 +118,10 @@ class ConfigService {
     ]);
 
     return this.getValue('MODE', true) === 'DEV'
-      ? conf_Postgres: this.getValue('MODE', true) === 'TEST'
-      ? conf_DbSqlite: conf_MySql;
+      ? conf_Postgres
+      : this.getValue('MODE', true) === 'TEST'
+      ? conf_DbSqlite
+      : conf_MySql;
   }
 }
 

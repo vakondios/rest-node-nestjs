@@ -174,10 +174,8 @@ export class BaseCrudService<T>
     switch (serviceName) {
       case 'UserService':
         return UserEntity;
-        break;
       case 'ReportService':
         return ReportEntity;
-        break;
     }
   }
 }

@@ -3,7 +3,6 @@ import * as bcrypt from 'bcrypt';
 import { LogMessageClass, LogMessageHeaderClass, LogMessageMessageClass } from './log.message.class';
 
 export class Utils {
-
   public static logMessage(
     note: string,
     transactionid: string,
