@@ -1,13 +1,13 @@
-import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { Logger } from '@nestjs/common';
-import { UserEntity } from '../../user/user.entity';
+import { TypeOrmModuleOptions } from '@nestjs/typeorm';
+
 import { ReportEntity } from '../../reports/report.entity';
+import { UserEntity } from '../../user/user.entity';
 
 require('dotenv').config();
 
 class ConfigService {
-
-  constructor(private env: { [k: string]: string | undefined }) { }
+  constructor(private env: { [k: string]: string | undefined }) {}
 
   private getValue(key: string, throwOnMissing = true): string {
     const value = this.env[key];
@@ -17,9 +17,9 @@ class ConfigService {
 
     return value;
   }
- 
+
   public ensureValues(keys: string[]) {
-    keys.forEach(k => this.getValue(k, true));
+    keys.forEach((k) => this.getValue(k, true));
     return this;
   }
 
@@ -27,24 +27,16 @@ class ConfigService {
     return this.getValue('COOKIE_KEY', true);
   }
 
-  public getPort() { 
+  public getPort() {
     return this.getValue('PORT', true);
   }
 
   public isProduction() {
-    const mode = this.getValue('MODE', false); 
-    return mode === 'PROD';  
+    const mode = this.getValue('MODE', false);
+    return mode === 'PROD';
   }
 
   public getTypeOrmConfig(): TypeOrmModuleOptions {
-    let type: any;
-
-    // switch (this.getValue('TYPEORM_CONNECTION')) {
-    //   case "sqlite": type = "sqlite"; break;
-    //   case "postgres": type = "postgres"; break;
-    //   default: type = "postgres";
-    // }
-
     const conf_Postgres: TypeOrmModuleOptions = {
       type: 'postgres',
       database: this.getValue('TYPEORM_DATABASE', true),
@@ -53,7 +45,7 @@ class ConfigService {
       username: this.getValue('TYPEORM_USER', true),
       password: this.getValue('TYPEORM_PASSWORD', true),
       url: this.getValue('TYPEORM_URL', true),
-      entities: [UserEntity,ReportEntity],
+      entities: [UserEntity, ReportEntity],
       //entities: ['src/**/*.entity.ts', 'dist/**/*.entity.js'],
       synchronize: this.getValue('TYPEORM_SYNC', true) === 'true',
       dropSchema: this.getValue('TYPEORM_DROP_SCHEMA', true) === 'true',
@@ -62,8 +54,7 @@ class ConfigService {
       migrationsTableName: '_migrations',
       migrations: ['/migrations/*{.ts,.js}'],
       migrationsRun: this.getValue('TYPEORM_MIGRATIONS_RUN', true) === 'true',
-      poolSize: parseInt(this.getValue('TYPEORM_CONNECTION_POOL_SIZE', true))
-     
+      poolSize: parseInt(this.getValue('TYPEORM_CONNECTION_POOL_SIZE', true)),
     };
 
     const conf_MySql: TypeOrmModuleOptions = {
@@ -74,7 +65,7 @@ class ConfigService {
       username: this.getValue('TYPEORM_USER', true),
       password: this.getValue('TYPEORM_PASSWORD', true),
       url: this.getValue('TYPEORM_URL'),
-      entities: [UserEntity,ReportEntity],
+      entities: [UserEntity, ReportEntity],
       //entities: ['src/**/*.entity.ts', 'dist/**/*.entity.js'],
       synchronize: this.getValue('TYPEORM_SYNC', true) === 'true',
       dropSchema: this.getValue('TYPEORM_DROP_SCHEMA', true) === 'true',
@@ -83,14 +74,13 @@ class ConfigService {
       migrationsTableName: '_migrations',
       migrations: ['/migrations/*{.ts,.js}'],
       migrationsRun: this.getValue('TYPEORM_MIGRATIONS_RUN', true) === 'true',
-      extra: { "connectionLimit" : parseInt(this.getValue('TYPEORM_CONNECTION_POOL_SIZE', true))}
-     
+      extra: { connectionLimit: parseInt(this.getValue('TYPEORM_CONNECTION_POOL_SIZE', true)) },
     };
 
     const conf_DbSqlite: TypeOrmModuleOptions = {
       type: 'sqlite',
       database: this.getValue('TYPEORM_DATABASE', true),
-      entities: [UserEntity,ReportEntity],
+      entities: [UserEntity, ReportEntity],
       //entities: ['src/**/*.entity.ts', 'dist/**/*.entity.js'],
       synchronize: this.getValue('TYPEORM_SYNC', true) === 'true',
       dropSchema: this.getValue('TYPEORM_DROP_SCHEMA', true) === 'true',
@@ -98,18 +88,15 @@ class ConfigService {
       logging: this.getValue('TYPEORM_LOGGING', true) === 'true',
       migrationsTableName: '_migrations',
       migrations: ['/migrations/*{.ts,.js}'],
-      migrationsRun: this.getValue('TYPEORM_MIGRATIONS_RUN', true) === 'true'
-     
+      migrationsRun: this.getValue('TYPEORM_MIGRATIONS_RUN', true) === 'true',
     };
 
-    Logger.log('************************************************************')
+    Logger.log('************************************************************');
     Logger.log(`Configuration for MODE ${this.getValue('MODE')} \n`, ConfigService.name);
-    Logger.log('************************************************************')
+    Logger.log('************************************************************');
 
     //Validates that all field have values
     this.ensureValues([
-      
-      'TYPEORM_CONNECTION',
       'TYPEORM_DATABASE',
       'TYPEORM_HOST',
       'TYPEORM_PORT',
@@ -129,10 +116,13 @@ class ConfigService {
       'JWT_EXPIRATION',
       'COOKIE_KEY',
     ]);
-    
-    return this.getValue('MODE', true) === 'DEV'?conf_Postgres:this.getValue('MODE', true) === 'TEST'?conf_DbSqlite:conf_Postgres;
-  }
 
+    return this.getValue('MODE', true) === 'DEV'
+      ? conf_Postgres
+      : this.getValue('MODE', true) === 'TEST'
+      ? conf_DbSqlite
+      : conf_MySql;
+  }
 }
 
 const configService = new ConfigService(process.env);

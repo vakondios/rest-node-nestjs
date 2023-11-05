@@ -1,1 +1,1 @@
-export interface IBaseController{}
+export interface IBaseController {}

@@ -1,4 +1,3 @@
-
 /*
 -------------------------------------------
 Decorator ONLY FOR ENTITIES @PropertyDto().
@@ -9,12 +8,12 @@ of the Entity Class.
 */
 const properties = Symbol('properties');
 export const PropertyDto = () => {
-    return (obj: any, propertyName: string) => {
-      (obj[properties] || (obj[properties] = [])).push(propertyName);
-    };
+  return (obj: any, propertyName: string) => {
+    (obj[properties] || (obj[properties] = [])).push(propertyName);
   };
-  
-  // This is a function to retrieve the list of properties for a class
-  export function getProperties(obj: any): [] {
-    return obj.prototype[properties];
-  }
+};
+
+// This is a function to retrieve the list of properties for a class
+export function getProperties(obj: any): [] {
+  return obj.prototype[properties];
+}

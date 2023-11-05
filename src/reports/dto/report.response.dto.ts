@@ -1,39 +1,39 @@
-import { IBaseEntity } from "src/_base/_interface/base.entity.interface";
-import { Expose, Transform } from "class-transformer";
+import { Expose } from 'class-transformer';
+import { IBaseEntity } from 'src/_base/_interface/base.entity.interface';
 
 export class ReportResponseDto implements IBaseEntity {
-    @Expose()
-    id: number;
-    
-    @Expose()
-    price:number;
+  @Expose()
+  id: number;
 
-    @Expose()
-    make: string
+  @Expose()
+  price: number;
 
-    @Expose()
-    model: string;
+  @Expose()
+  make: string;
 
-    @Expose()
-    year: number;
+  @Expose()
+  model: string;
 
-    @Expose()
-    lng: number;
+  @Expose()
+  year: number;
 
-    @Expose()
-    lat:number;
+  @Expose()
+  lng: number;
 
-    @Expose()
-    mileage:number
+  @Expose()
+  lat: number;
 
-    @Expose()
-    approved:boolean
+  @Expose()
+  mileage: number;
 
-    // @Transform(({obj}) => obj.createdBy.id)
-    // @Expose()
-    // createdBy: number
+  @Expose()
+  approved: boolean;
 
-    // @Transform(({obj}) => obj.updatedBy.id)
-    // @Expose()
-    // updatedBy: number
+  // @Transform(({obj}) => obj.createdBy.id)
+  // @Expose()
+  // createdBy: number
+
+  // @Transform(({obj}) => obj.updatedBy.id)
+  // @Expose()
+  // updatedBy: number
 }

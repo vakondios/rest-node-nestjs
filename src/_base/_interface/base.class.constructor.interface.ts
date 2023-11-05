@@ -1,3 +1,3 @@
-export interface IBaseClassConstructor{
-    new (...args: any[]): {}
+export interface IBaseClassConstructor {
+  new (...args: any[]): {};
 }
