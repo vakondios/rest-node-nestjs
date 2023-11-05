@@ -18,7 +18,7 @@ describe('AuthController (e2e)', () => {
   const userRepositoryToken: string | Function = getRepositoryToken(UserEntity);
   let moduleFixture: TestingModule;
   const email: string = 'antonisg@vakondios.gr';
-  const password: string = 'P@risL0nd0n';
+  const password: string = 'UEByaXNMMG5kMG4gICByZnJ0cmV0ZXJ0';
   const firstname: string = 'antonis';
   const lastname: string = 'vakondios';
   const username: string = 'avacondios';

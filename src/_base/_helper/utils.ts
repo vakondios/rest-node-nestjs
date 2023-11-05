@@ -3,10 +3,6 @@ import * as bcrypt from 'bcrypt';
 import { LogMessageClass, LogMessageHeaderClass, LogMessageMessageClass } from './log.message.class';
 
 export class Utils {
-  public static genId(length = 16): string {
-    const p = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    return [...Array(length)].reduce((a) => a + p[~~(Math.random() * p.length)], '');
-  }
 
   public static logMessage(
     note: string,
